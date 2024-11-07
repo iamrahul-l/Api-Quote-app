@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Quotes</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <a class="logo" href="">Movie Quotes</a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Get New Quote</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Project Documentation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <p class="quote">"<%= quote %>"</p>
+        <p class="author">- <%= author %></p>
+        
+        <% if (poster) { %>
+            <img src="<%= poster %>" alt="Movie Poster" class="poster">
+            <p class="description"><%= description %></p>
+            <p class="release-date">Released: <%= releaseDate %></p>
+        <% } else { %>
+            <p class="no-poster">Poster and details not available for this movie.</p>
+        <% } %>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <%= new Date().getFullYear() %> Movie Quotes. All rights reserved.</p>
+    </footer>
+</body>
+</html>
