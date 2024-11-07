@@ -14,7 +14,7 @@ app.use(express.static('public'));
 
 app.get("/",async(req,res)=>{
     try {
-        const quoteres = await axios.get('http://localhost:5000/api/quote');
+        const quoteres = await axios.get('https://api-kteh.onrender.com/api/quote');
         const quote = quoteres.data.quote;
         const movietitle = quoteres.data.movie;
 
